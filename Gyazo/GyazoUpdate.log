@@ -1,0 +1,13 @@
+*** GyazoUpdate started at 2019-12-09T14:32:03.917000
+.NET Framework build number = 528040
+Feching latest update info...
+Latest version number: 4.1.0.0
+Current version number: 4.0.2.0, (Gyazowin.exe)
+C:\ProgramData\Gyazo\GyazoSetup.exe
+Downloading...
+Download finished
+Change Directory: C:\Program Files (x86)\Gyazo
+VerifySign.exe "C:\ProgramData\Gyazo\GyazoSetup.exe"
+Signature is verified
+Start Installer
+Exit at 2019-12-09T14:32:17.793000
