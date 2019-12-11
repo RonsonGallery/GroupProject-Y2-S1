@@ -27,10 +27,3 @@ def menu():
     if choice == '0':
         return False
     return True
-
-loop = True
-
-while loop:
-    loop = menu()
-    for q in questions:
-        print("question diffculty is: ",q.question_info["Difficulity"])
