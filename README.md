@@ -1,22 +1,31 @@
-# GroupProject-Y2-S1
-#Current functoinlaity
+## GroupProject-Y2-S1
+#### Project for fundamentals of SoftwareEngineering
+# Current functoinlaity
 
-* log in screen
+> * log in screen
 
-* Add/Remove new users
+> * Add/Remove new users
 
-* functional classes
+> * functional classes
 
 
-#WIP
+# WIP
 
-* Search function to look for exam you need currently
+> * Search function to look for exam you need currently
 
-* PDF2Image
+> * PDF2Image
 
-* Image2docx
+> * Image2docx
 
-* PDF Cropping (Potentaily Via a diffrent application)
+> * PDF Cropping (Potentaily Via a diffrent application)
 
 Exam Manager of sorts with option to crop questions from the exams
 
+@Authors:
+
+##### - Roni
+
+##### - Eli
+
+##### - Tal
+##### - Eden
