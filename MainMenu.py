@@ -2,15 +2,17 @@ import examManagerClasses
 
 questions = []
 
-def menu():
+def menu(x):
 
     print("-Menu-")
-    print("-1-Add new user <in development>")
-    print("-2-Delete existing user <in development>")
-    print("-3-Update existing user <in development>")
-    print("-4-Add new question <in development>")
-    print("-5-Delete existing question <in development>")
-    print("-6-Update existing question <in development>")
+    if x == 1:
+        print("-1-Add new user <in development>")
+        print("-2-Delete existing user <in development>")
+        print("-3-Update existing user <in development>")
+    if x == 2 or x == 1:
+        print("-4-Add new question <in development>")
+        print("-5-Delete existing question <in development>")
+        print("-6-Update existing question <in development>")
     print("-7-View questions <in development>")
     print("-0-Exit")
 
