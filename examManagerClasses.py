@@ -105,4 +105,21 @@ class UserData:
        #self.Student_list.append((first_name,last_name,Id,password))
         f=open("Student.txt","a")
         L=["\n",first_name," ",last_name," ",Id," ",password]
-        f.writelines(L)  
+        f.writelines(L)
+        
+        def remove_Coordinator(self,Id=''):
+        Id = input("Which id would you like to remove")
+        f = open("Coordinator.txt", "r")
+        g = open("Coordinator1.txt" ,"w")
+        for line in f:
+            if Id in line:
+                    continue
+            g.writelines(line)
+        f.close()
+        g.close()
+        f = open("Coordinator.txt", "w")
+        g = open("Coordinator1.txt" ,"r")
+        for line in g:
+             f.writelines(line)
+        g.close()
+        f.close()
