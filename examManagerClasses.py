@@ -123,3 +123,37 @@ class UserData:
              f.writelines(line)
         g.close()
         f.close()
+
+    def remove_Lecturerer(self,Id=''):
+        Id = input("Which id would you like to remove")
+        f = open("Lecturerer.txt", "r")
+        g = open("Lecturerer1.txt" ,"w")
+        for line in f:
+            if Id in line:
+                    continue
+            g.writelines(line)
+        f.close()
+        g.close()
+        f = open("Lecturerer.txt", "w")
+        g = open("Lecturerer1.txt" ,"r")
+        for line in g:
+             f.writelines(line)
+        g.close()
+        f.close()
+
+    def remove_Student(self,Id=''):
+        Id = input("Which id would you like to remove")
+        f = open("Student.txt", "r")
+        g = open("Student1.txt" ,"w")
+        for line in f:
+            if Id in line:
+                    continue
+            g.writelines(line)
+        f.close()
+        g.close()
+        f = open("Student.txt", "w")
+        g = open("Student1.txt" ,"r")
+        for line in g:
+             f.writelines(line)
+        g.close()
+        f.close()
