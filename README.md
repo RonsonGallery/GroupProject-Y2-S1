@@ -1,5 +1,5 @@
 # GroupProject-Y2-S1
-#Current functoinlaity
+# Current functoinlaity
 
 > - log in screen
 
@@ -7,8 +7,7 @@
 
 > - functional classes
 
-
-#WIP
+# WIP
 
 > - Search function to look for exam you need currently
 
