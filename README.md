@@ -19,6 +19,12 @@
 
 > - Exam Manager of sorts with option to crop questions from the exams
 
+# Known Bugs:
+
+> - Menu show's even if you fail to connect
+
+> - if password is longer or shorter then 5 charcters you will fail to connect
+
 @Author's
 
 - Roni
