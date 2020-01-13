@@ -1,0 +1,6 @@
+Timestamp: 2020-01-13 11:35:33 Succesfuly enterd menu
+Timestamp: 2020-01-13 11:35:44 Failed login as Coordinator Lengnth of execution:2.743920900000001
+Timestamp: 2020-01-13 11:35:44 Succesfuly enterd menu
+Timestamp: 2020-01-13 11:35:46 failed login as Lecturer Lengnth of execution:0.9353463999999985
+Timestamp: 2020-01-13 11:35:46 Succesfuly enterd menu
+Timestamp: 2020-01-13 11:35:49 failed login as Student Lengnth of execution:1.383299700000002

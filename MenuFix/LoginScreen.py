@@ -4,7 +4,7 @@ import datetime
 import timeit
 def Login():
     f=open("Log.txt","a")
-    f.write('Timestamp: {:%Y-%m-%d %H:%M:%S}'.format(datetime.datetime.now()) + ' Succesfuly enterd menu' )
+    f.write('Timestamp: {:%Y-%m-%d %H:%M:%S}'.format(datetime.datetime.now()) + ' Succesfuly enterd menu'+'\n' )
     print("Welcom To Program, please enter: ")
     print('1 - to log in as Coordinator')
     print('2 - to log in as Lecturer')
@@ -39,7 +39,7 @@ def Login():
         start = timeit.default_timer()
         print('Entering Lecturer Menu...')
         Id = input('Enter Id: ') # משתנה התופס קוד זיהוי
-        f = open('Lecturer.txt','r') # פותח קובץ
+        f = open('Lecturerer.txt','r') # פותח קובץ
         for line in f:
             if Id in line:
                 username = line[0:8]
