@@ -1,3 +1,7 @@
+import os
+import datetime
+import timeit
+
 class Department:
     def __init__(self, dep_name='', coordinator_name=''):
 
@@ -67,6 +71,7 @@ class UserData:
         self.lecturer_list = []
 
     def add_Coordinator(self, first_name='',last_name='',Id='',password=''):
+        start = timeit.default_timer()
         print("First Name of Coordinator: ")
         first_name=input()
         print("Last Name of Coordinator: ")
@@ -77,8 +82,12 @@ class UserData:
         password=input()
         f=open("Coordinator.txt","a")
         L=["\n",first_name," ",last_name," ",Id," ",password]
-        f.writelines(L)  
+        f.writelines(L)
+        stop = timeit.default_timer()
+        f=open("Log.txt","a")
+        f.write('Timestamp: {:%Y-%m-%d %H:%M:%S}'.format(datetime.datetime.now()) + ' Cordinator Added Succesfuly'+ ' Lengnth of execution:' + str(stop - start)+'\n')
     def add_Lecturer(self, first_name='',last_name='',Id='',password=''):
+         start = timeit.default_timer()
          print("First Name of Lecturer: ")
          first_name=input()
          print("Last Name of Lecturer: ")
@@ -90,10 +99,13 @@ class UserData:
         #self.Lecturer_list.append((first_name,last_name,Id,password))
          f=open("Lecturerer.txt","a")
          L=["\n",first_name," ",last_name," ",Id," ",password]
+         stop = timeit.default_timer()
          f.writelines(L)  
-         
+         f=open("Log.txt","a")
+         f.write('Timestamp: {:%Y-%m-%d %H:%M:%S}'.format(datetime.datetime.now()) + ' Lecturer Added Succesfuly' + ' Lengnth of execution:' + str(stop - start)+'\n')
 
     def add_Student(self, first_name='',last_name='',Id='',password=''):
+        start = timeit.default_timer()
         print("First Name of Student: ")
         first_name=input()
         print("Last Name of Student: ")
@@ -105,4 +117,72 @@ class UserData:
        #self.Student_list.append((first_name,last_name,Id,password))
         f=open("Student.txt","a")
         L=["\n",first_name," ",last_name," ",Id," ",password]
-        f.writelines(L)  
+        f.writelines(L)
+        stop = timeit.default_timer()
+        f=open("Log.txt","a")
+        f.write('Timestamp: {:%Y-%m-%d %H:%M:%S}'.format(datetime.datetime.now()) + ' Student Added Succesfuly'+ ' Lengnth of execution:' + str(stop - start)+'\n')
+
+       
+    def remove_Coordinator(self,Id=''):
+        start = timeit.default_timer()
+        Id = input("Which id would you like to remove")
+        f = open("Coordinator.txt", "r")
+        g = open("Coordinator1.txt" ,"w")
+        for line in f:
+            if Id in line:
+                    continue
+            g.writelines(line)
+        f.close()
+        g.close()
+        f = open("Coordinator.txt", "w")
+        g = open("Coordinator1.txt" ,"r")
+        for line in g:
+             f.writelines(line)
+        g.close()
+        f.close()
+        os.remove("Coordinator1.txt")
+        stop = timeit.default_timer()
+        f=open("Log.txt","a")
+        f.write('Timestamp: {:%Y-%m-%d %H:%M:%S}'.format(datetime.datetime.now()) + ' Cordinator Removed Succesfuly'+ ' Lengnth of execution:' + str(stop - start)+'\n')
+    def remove_Lecturerer(self,Id=''):
+        start = timeit.default_timer()
+        Id = input("Which id would you like to remove")
+        f = open("Lecturerer.txt", "r")
+        g = open("Lecturerer1.txt" ,"w")
+        for line in f:
+            if Id in line:
+                    continue
+            g.writelines(line)
+        f.close()
+        g.close()
+        f = open("Lecturerer.txt", "w")
+        g = open("Lecturerer1.txt" ,"r")
+        for line in g:
+             f.writelines(line)
+        g.close()
+        f.close()
+        os.remove("Lecturerer1.txt")
+        stop = timeit.default_timer()
+        f=open("Log.txt","a")
+        f.write('Timestamp: {:%Y-%m-%d %H:%M:%S}'.format(datetime.datetime.now()) + ' Lecturer Removed Succesfuly'+ ' Lengnth of execution:' + str(stop - start)+'\n')
+    def remove_Student(self,Id=''):
+        start = timeit.default_timer()
+        Id = input("Which id would you like to remove")
+        f = open("Student.txt", "r")
+        g = open("Student1.txt" ,"w")
+        for line in f:
+            if Id in line:
+                    continue
+            g.writelines(line)
+        f.close()
+        g.close()
+        f = open("Student.txt", "w")
+        g = open("Student1.txt" ,"r")
+        for line in g:
+             f.writelines(line)
+        g.close()
+        f.close()
+        os.remove("Student1.txt")
+        stop = timeit.default_timer()
+        f=open("Log.txt","a")
+        f.write('Timestamp: {:%Y-%m-%d %H:%M:%S}'.format(datetime.datetime.now()) + ' Student Removed Succesfuly'+ ' Lengnth of execution:' + str(stop - start)+'\n')

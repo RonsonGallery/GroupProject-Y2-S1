@@ -1,6 +1,8 @@
 import examManagerClasses
 import ExamManagerGetters
 import LoginScreen
+f=open("Log.txt","w")
+f.close()
 questions = []
 
 def menu(x):
@@ -8,8 +10,8 @@ def menu(x):
 
     print("-Menu-")
     if x == 1:
-        print("-1-Add new user <in development>")
-        print("-2-Delete existing user <in development>")
+        print("-1-Add new user")
+        print("-2-Delete existing user")
         print("-3-Update existing user <in development>")
     if x == 2 or x == 1:
         print("-4-Add new question <in development>")
@@ -21,7 +23,7 @@ def menu(x):
     choice = input()
     
     if choice == '1':
-        print("which type of user would you like to add \n 1-coordinator   2-lecturer   3-student")
+        print("which type of user would you like to add \n 1-Coordinator   2-Lecturer   3-Student")
         type=input()
         
         if(type=='1'):
@@ -30,16 +32,24 @@ def menu(x):
              examManagerClasses.UserData.add_Lecturer("","","","","")
         if(type=='3'):
               examManagerClasses.UserData.add_Student("","","","","")
-
+    if choice == '2':
+        print("which type of user would you like to Remove \n 1-Coordinator   2-Lecturer   3-Student")
+        type=input()
+        if(type=='1'):
+            examManagerClasses.UserData.remove_Coordinator("","")
+        if(type=='2'):
+             examManagerClasses.UserData.remove_Lecturerer("","")
+        if(type=='3'):
+              examManagerClasses.UserData.remove_Student("","")
     if choice == '4':
         q = classes.Question()
         q.question_info["Difficulity"] = "Medium"
         questions.append(q)
 
-    if choice == '6':
+    #if choice == '6':
 
 
-     if choice == '0':
+    if choice == '0':
         return False
     return True
 
@@ -47,61 +57,7 @@ loop = True
 #LoginScreen
 
 
-def Login():
-    
-    print("Welcom To Program, please enter: ")
-    print('1 - to log in as Coordinator')
-    print('2 - to log in as Lecturer')
-    print('3 - to log in as Student')
-    kind = int(input()) # משתנה התופס את סוג המשתמש
-    if (kind == 1):
-        print('Entering Coordinator Menu...')
-        Id = input('Enter Id: ') # משתנה התופס קוד זיהוי
-        f = open('Coordinator.txt','r') # פותח קובץ
-        for line in f:
-            if Id in line:
-                username = line[0:8] # שומר ת.ז
-                password = line[9:14] # שומר סיסמא
-                trytopass = input('Enter password:') # משתנה לניסיון מעבר הסיסמא
-                if (password == trytopass):
-                    print("succeeded")
-                    return 1
-                return False
-        return False
 
-    if (kind == 2):
-        print('Entering Lecturer Menu...')
-        Id = input('Enter Id: ') # משתנה התופס קוד זיהוי
-        f = open('Lecturer.txt','r') # פותח קובץ
-        for line in f:
-            if Id in line:
-                username = line[0:8]
-                password = line[9:14]
-                trytopass = input('Enter password:') # משתנה לניסיון מעבר הסיסמא
-                if (password == trytopass):
-                    print("succeeded")
-                    return 2
-                return False
-        return False
-
-    if (kind == 3):
-        print('Entering Student Menu...')
-        Id = input('Enter Id: ') # משתנה התופס קוד זיהוי
-        f = open('Student.txt','r') # פותח קובץ
-        for line in f:
-            if Id in line:
-                username = line[0:8]
-                password = line[9:14]
-                trytopass = input('Enter password:') # משתנה לניסיון מעבר הסיסמא
-                if (password == trytopass):
-                    print("succeeded")
-                    return 3
-                return False
-        return False
-
-    else:
-         return False
-    
 #while loop:
   #  loop = menu()
    # for q in questions:

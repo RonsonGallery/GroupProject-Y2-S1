@@ -1,0 +1,3 @@
+Timestamp: 2020-01-13 16:00:43 Succesfuly enterd Login Menu
+Timestamp: 2020-01-13 16:00:47 Succesful login as Coordinator Lengnth of execution:2.4973207
+Timestamp: 2020-01-13 16:00:47 Succesfuly logged in Lengnth of execution:4.5480206999999995
