@@ -21,9 +21,9 @@
 
 # Known Bugs:
 
-> - Menu show's even if you fail to connect
+> - [x]Menu show's even if you fail to connect (-fixed-)
 
-> - if password is longer or shorter then 5 charcters you will fail to connect
+> - [x]if password is longer or shorter then 5 charcters you will fail to connect (-fixed-)
 
 @Author's
 
