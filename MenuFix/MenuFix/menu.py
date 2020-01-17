@@ -14,8 +14,9 @@ def menu(x):
         print("-2-Delete existing user")
         print("-3-Update existing user <in development>")
     if x == 2 or x == 1:
-        print("-4-Add new question <in development>")
-        print("-5-Delete existing question <in development>")
+        print("-4-Add new exam <in development>")
+        print("-5-view existing exam <in development>")
+        #print("-5-Delete existing question <in development>")
         print("-6-Update existing question <in development>")
     print("-7-View questions <in development>")
     print("-0-Exit")
@@ -42,10 +43,9 @@ def menu(x):
         if(type=='3'):
               examManagerClasses.UserData.remove_Student("","")
     if choice == '4':
-        q = classes.Question()
-        q.question_info["Difficulity"] = "Medium"
-        questions.append(q)
-
+        examManagerClasses.UserData.add_exam("")
+    if choice == '5':
+        examManagerClasses.UserData.open_exam("")
     #if choice == '6':
 
 

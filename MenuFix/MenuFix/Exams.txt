@@ -1,0 +1,3 @@
+[NameoFfile][Date][Moed][Semster][Format]
+
+m-10.10.2016 10.10.2016 b summer pdf

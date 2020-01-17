@@ -1,7 +1,7 @@
 import os
 import datetime
 import timeit
-
+import subprocess
 class Department:
     def __init__(self, dep_name='', coordinator_name=''):
 
@@ -186,3 +186,35 @@ class UserData:
         stop = timeit.default_timer()
         f=open("Log.txt","a")
         f.write('Timestamp: {:%Y-%m-%d %H:%M:%S}'.format(datetime.datetime.now()) + ' Student Removed Succesfuly'+ ' Lengnth of execution:' + str(stop - start)+'\n')
+
+    def add_exam(self):
+            print("Make Sure you copy the exam to the apropriate directory")
+            Name = input("Enter the name of the file fully: ")
+            Day = input("Enter Day: ")
+            Month = input("Enter Month: ")
+            Year = input("Enter Year: ")
+            Moed = input("Enter the moed A for the first B for second C for special: ")
+            Semester = input("Enter the Semester (Winter,Spring,Summer): ")
+            Format = input("Enter the format for the file (docx,pdf): ")
+            f=open("Exams.txt","a")
+            L=["\n",Name," ",Day,".",Month,".",Year," ",Moed.lower()," ",Semester.lower()," ",Format.lower()]
+            f.writelines(L)
+            f.close()
+    def open_exam(self):
+            Day = input("Enter Day: ")
+            Month = input("Enter Month: ")
+            Year = input("Enter Year: ")
+            Format = input("Enter the format for the file (docx,pdf): ")
+            Date = Day + '.' + Month + '.' +Year
+            f = open("Exams.txt" ,"r")
+            for line in f:
+                if Date in line:
+                    line = line.split()
+                    Directory = os.getcwd()
+                    Directory = Directory.replace('\\','\\\\')
+                    print(Directory)
+                    os.system(str(Directory) +'\\' +'Exams'+'\\'+ str(line[0])+'.'+Format)
+                    #os.system('C:\\Users\\Owner\\source\\repos\\MenuFix\\MenuFix\\Exams' +'\\' + str(line[0])+'.'+Format)
+                    break
+            f.close()
+                
