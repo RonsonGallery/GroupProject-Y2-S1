@@ -13,7 +13,7 @@
 >- Add/view exams
 # WIP
 
-> - Search function to look for exam you need currently
+> - [x]Search function to look for exam you need currently(-added-)(17-1-2020)
 
 > - PDF2Image
 
